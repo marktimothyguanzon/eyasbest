@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Store - Eya’s Best Coffee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Eya’s Best Coffee</h1>
+  <nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Shop Our Merchandise</h2>
+    <p>Exclusive coffee shop items for our fans</p>
+    <a href="#products">Browse Products</a>
+  </div>
+</section>
+
+<section id="products">
+  <h3 class="section-title">Coffee Shop Items</h3>
+  <div class="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1598300052396-1f04efcb31d8" alt="Coffee Mug">
+      <h4>Logo Coffee Mug</h4>
+      <span>₱250</span>
+      <button onclick="addToCart('Logo Coffee Mug', 250)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1618292046713-5a66b07b6ed2" alt="Eya's Best Design Tumbler">
+      <h4>Eya's Best Design Tumbler</h4>
+      <span>₱350</span>
+      <button onclick="addToCart('Eya\'s Best Design Tumbler', 350)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1598300052551-9f8f12e3836f" alt="Branded T-shirt">
+      <h4>Branded T-shirt</h4>
+      <span>₱500</span>
+      <button onclick="addToCart('Branded T-shirt', 500)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1615869986038-73c7c5e3a4a8" alt="Coffee Table Book">
+      <h4>Coffee Table Book</h4>
+      <span>₱200</span>
+      <button onclick="addToCart('Coffee Table Book', 200)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1618292046713-5a66b07b6ed2" alt="Notebook">
+      <h4>Notebook</h4>
+      <span>₱180</span>
+      <button onclick="addToCart('Notebook', 180)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1588776814546-dc81e5e16180" alt="Tote Bag">
+      <h4>Tote Bag</h4>
+      <span>₱120</span>
+      <button onclick="addToCart('Tote Bag', 120)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>© 2025 Eya’s Best Coffee • All Rights Reserved</p>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+// Simple Add to Cart
+function addToCart(item, price) {
+  alert(`${item} has been added to your cart. Price: ₱${price}`);
+}
+</script>
+
+</body>
+</html>
